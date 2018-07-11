@@ -17,7 +17,7 @@
 	"gnetId": 462,
 	"graphTooltip": 0,
 	"id": 42,
-	"iteration": 1529899317466,
+	"iteration": 1530668295268,
 	"links": [],
 	"panels": [
 		{
@@ -1119,7 +1119,7 @@
 				"min": false,
 				"rightSide": true,
 				"show": true,
-				"sort": "total",
+				"sort": "current",
 				"sortDesc": true,
 				"total": true,
 				"values": true
@@ -1268,7 +1268,7 @@
 			},
 			"yaxes": [
 				{
-					"format": "short",
+					"format": "decbytes",
 					"label": null,
 					"logBase": 1,
 					"max": null,
@@ -1398,8 +1398,9 @@
 			{
 				"allValue": null,
 				"current": {
-					"text": "All",
-					"value": "$__all"
+					"tags": [],
+					"text": "ali-bjjg-web-3:13147",
+					"value": "ali-bjjg-web-3:13147"
 				},
 				"datasource": "prometheus",
 				"hide": 0,
@@ -1539,7 +1540,7 @@
 		]
 	},
 	"time": {
-		"from": "now-30m",
+		"from": "now-1h",
 		"to": "now"
 	},
 	"timepicker": {
@@ -1570,5 +1571,5 @@
 	"timezone": "browser",
 	"title": "Nginx Requests",
 	"uid": "IvQzcUNik",
-	"version": 21
+	"version": 22
 }

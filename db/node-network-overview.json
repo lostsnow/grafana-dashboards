@@ -17,7 +17,7 @@
 	"gnetId": 1856,
 	"graphTooltip": 2,
 	"id": 15,
-	"iteration": 1529913407592,
+	"iteration": 1530065575725,
 	"links": [],
 	"panels": [
 		{
@@ -571,34 +571,6 @@
 				{
 					"alias": "/.*Trans.*/",
 					"transform": "negative-Y"
-				},
-				{
-					"alias": "/.*lo.*/",
-					"color": "#7EB26D"
-				},
-				{
-					"alias": "/.*eth0.*/",
-					"color": "#EAB839"
-				},
-				{
-					"alias": "/.*eth1.*/",
-					"color": "#6ED0E0"
-				},
-				{
-					"alias": "/.*eth2.*/",
-					"color": "#EF843C"
-				},
-				{
-					"alias": "/.*eth3.*/",
-					"color": "#E24D42"
-				},
-				{
-					"alias": "/.*eth4.*/",
-					"color": "#1F78C1"
-				},
-				{
-					"alias": "/.*eth5.*/",
-					"color": "#BA43A9"
 				}
 			],
 			"spaceLength": 10,
@@ -606,18 +578,18 @@
 			"steppedLine": false,
 			"targets": [
 				{
-					"expr": "irate(node_network_receive_packets_total{instance=~\"$node\",device=~\"$device\"}[5m])",
+					"expr": "sum(irate(node_network_receive_packets_total{instance=~\"$node\",device=~\"$device\"}[5m]))",
 					"format": "time_series",
-					"intervalFactor": 2,
-					"legendFormat": "{{device}} - Receive",
+					"intervalFactor": 1,
+					"legendFormat": "Receive",
 					"refId": "O",
 					"step": 4
 				},
 				{
-					"expr": "irate(node_network_transmit_packets_total{instance=~\"$node:$port\",job=~\"$job\"}[5m])",
+					"expr": "sum(irate(node_network_transmit_packets_total{instance=~\"$node\",device=~\"$device\"}[5m]))",
 					"format": "time_series",
-					"intervalFactor": 2,
-					"legendFormat": "{{device}} - Transmit",
+					"intervalFactor": 1,
+					"legendFormat": "Transmit",
 					"refId": "P",
 					"step": 4
 				}
@@ -1083,7 +1055,6 @@
 			{
 				"allValue": null,
 				"current": {
-					"tags": [],
 					"text": "All",
 					"value": "$__all"
 				},
@@ -1234,5 +1205,5 @@
 	"timezone": "browser",
 	"title": "Node - Network Overview",
 	"uid": "hfyNuxNmz",
-	"version": 53
+	"version": 57
 }

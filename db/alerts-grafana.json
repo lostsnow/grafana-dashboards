@@ -879,7 +879,7 @@
 					"format": "time_series",
 					"interval": "",
 					"intervalFactor": 2,
-					"legendFormat": "{{instance}} {{ stage }}",
+					"legendFormat": "{{instance}}",
 					"refId": "A"
 				}
 			],
@@ -1099,5 +1099,5 @@
 	"timezone": "",
 	"title": "Alerts - Grafana",
 	"uid": "000000012",
-	"version": 59
+	"version": 60
 }
